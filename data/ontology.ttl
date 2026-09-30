@@ -1,0 +1,299 @@
+@prefix bkg: <http://example.org/biomedkg#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bkg:DRUG_0001 a bkg:Drug,
+        owl:NamedIndividual ;
+    bkg:canonicalName "Metformin"^^xsd:string ;
+    bkg:hasSynonym "Dimethylbiguanide"^^xsd:string,
+        "Glucophage"^^xsd:string,
+        "Metformin HCl"^^xsd:string,
+        "Metformin Hydrochloride"^^xsd:string ;
+    bkg:hasXref "CHEMBL:CHEMBL1431"^^xsd:string,
+        "DrugBank:DB00331"^^xsd:string,
+        "RxNorm:6809"^^xsd:string ;
+    bkg:targets bkg:PATHWAY_0001 ;
+    bkg:treats bkg:DISEASE_0001 .
+
+bkg:DRUG_0002 a bkg:Drug,
+        owl:NamedIndividual ;
+    bkg:canonicalName "Insulin Glargine"^^xsd:string ;
+    bkg:hasSynonym "Glargine"^^xsd:string,
+        "Insulin glargine recombinant"^^xsd:string,
+        "Lantus"^^xsd:string ;
+    bkg:hasXref "CHEMBL:CHEMBL1201499"^^xsd:string,
+        "DrugBank:DB00047"^^xsd:string,
+        "RxNorm:274783"^^xsd:string ;
+    bkg:targets bkg:PATHWAY_0001 ;
+    bkg:treats bkg:DISEASE_0001,
+        bkg:DISEASE_0002 .
+
+bkg:DRUG_0003 a bkg:Drug,
+        owl:NamedIndividual ;
+    bkg:canonicalName "Lisinopril"^^xsd:string ;
+    bkg:hasSynonym "Lisinopril dihydrate"^^xsd:string,
+        "Prinivil"^^xsd:string,
+        "Zestril"^^xsd:string ;
+    bkg:hasXref "CHEMBL:CHEMBL1560"^^xsd:string,
+        "DrugBank:DB00722"^^xsd:string,
+        "RxNorm:29046"^^xsd:string ;
+    bkg:targets bkg:PATHWAY_0002 ;
+    bkg:treats bkg:DISEASE_0003 .
+
+bkg:DRUG_0004 a bkg:Drug,
+        owl:NamedIndividual ;
+    bkg:canonicalName "Donepezil"^^xsd:string ;
+    bkg:hasSynonym "Aricept"^^xsd:string,
+        "Donepezil HCl"^^xsd:string,
+        "Donepezil hydrochloride"^^xsd:string ;
+    bkg:hasXref "CHEMBL:CHEMBL502"^^xsd:string,
+        "DrugBank:DB00843"^^xsd:string,
+        "RxNorm:3155"^^xsd:string ;
+    bkg:targets bkg:PATHWAY_0003 ;
+    bkg:treats bkg:DISEASE_0004 .
+
+bkg:DRUG_0005 a bkg:Drug,
+        owl:NamedIndividual ;
+    bkg:canonicalName "Osimertinib"^^xsd:string ;
+    bkg:hasSynonym "AZD9291"^^xsd:string,
+        "Osimertinib mesylate"^^xsd:string,
+        "Tagrisso"^^xsd:string ;
+    bkg:hasXref "CHEMBL:CHEMBL3353410"^^xsd:string,
+        "DrugBank:DB09330"^^xsd:string,
+        "RxNorm:1873987"^^xsd:string ;
+    bkg:targets bkg:PATHWAY_0004 ;
+    bkg:treats bkg:DISEASE_0005 .
+
+bkg:DRUG_0006 a bkg:Drug,
+        owl:NamedIndividual ;
+    bkg:canonicalName "Methotrexate"^^xsd:string ;
+    bkg:hasSynonym "Amethopterin"^^xsd:string,
+        "Rheumatrex"^^xsd:string,
+        "Trexall"^^xsd:string ;
+    bkg:hasXref "CHEMBL:CHEMBL34259"^^xsd:string,
+        "DrugBank:DB00563"^^xsd:string,
+        "RxNorm:6851"^^xsd:string ;
+    bkg:targets bkg:PATHWAY_0005 ;
+    bkg:treats bkg:DISEASE_0006 .
+
+bkg:GENE_0001 a bkg:Gene,
+        owl:NamedIndividual ;
+    bkg:associatedWithGene bkg:DISEASE_0001 ;
+    bkg:canonicalName "TCF7L2"^^xsd:string ;
+    bkg:hasSynonym "TCF-4"^^xsd:string,
+        "TCF4-like 2"^^xsd:string,
+        "Transcription factor 7-like 2"^^xsd:string ;
+    bkg:hasXref "Ensembl:ENSG00000148737"^^xsd:string,
+        "HGNC:HGNC:11641"^^xsd:string,
+        "NCBIGene:6934"^^xsd:string ;
+    bkg:participatesInPathway bkg:PATHWAY_0001 .
+
+bkg:GENE_0002 a bkg:Gene,
+        owl:NamedIndividual ;
+    bkg:associatedWithGene bkg:DISEASE_0002 ;
+    bkg:canonicalName "INS"^^xsd:string ;
+    bkg:hasSynonym "IDDM2"^^xsd:string,
+        "Insulin gene"^^xsd:string,
+        "Preproinsulin"^^xsd:string ;
+    bkg:hasXref "Ensembl:ENSG00000254647"^^xsd:string,
+        "HGNC:HGNC:6081"^^xsd:string,
+        "NCBIGene:3630"^^xsd:string ;
+    bkg:participatesInPathway bkg:PATHWAY_0001 .
+
+bkg:GENE_0003 a bkg:Gene,
+        owl:NamedIndividual ;
+    bkg:associatedWithGene bkg:DISEASE_0003 ;
+    bkg:canonicalName "AGT"^^xsd:string ;
+    bkg:hasSynonym "Angiotensinogen"^^xsd:string,
+        "SERPINA8"^^xsd:string,
+        "Serpin A8"^^xsd:string ;
+    bkg:hasXref "Ensembl:ENSG00000135744"^^xsd:string,
+        "HGNC:HGNC:333"^^xsd:string,
+        "NCBIGene:183"^^xsd:string ;
+    bkg:participatesInPathway bkg:PATHWAY_0002 .
+
+bkg:GENE_0004 a bkg:Gene,
+        owl:NamedIndividual ;
+    bkg:associatedWithGene bkg:DISEASE_0004 ;
+    bkg:canonicalName "APOE"^^xsd:string ;
+    bkg:hasSynonym "AD2"^^xsd:string,
+        "Apolipoprotein E"^^xsd:string ;
+    bkg:hasXref "Ensembl:ENSG00000130203"^^xsd:string,
+        "HGNC:HGNC:613"^^xsd:string,
+        "NCBIGene:348"^^xsd:string ;
+    bkg:participatesInPathway bkg:PATHWAY_0003 .
+
+bkg:GENE_0005 a bkg:Gene,
+        owl:NamedIndividual ;
+    bkg:associatedWithGene bkg:DISEASE_0005 ;
+    bkg:canonicalName "EGFR"^^xsd:string ;
+    bkg:hasSynonym "ERBB1"^^xsd:string,
+        "Epidermal growth factor receptor"^^xsd:string,
+        "HER1"^^xsd:string ;
+    bkg:hasXref "Ensembl:ENSG00000146648"^^xsd:string,
+        "HGNC:HGNC:3236"^^xsd:string,
+        "NCBIGene:1956"^^xsd:string ;
+    bkg:participatesInPathway bkg:PATHWAY_0004 .
+
+bkg:GENE_0006 a bkg:Gene,
+        owl:NamedIndividual ;
+    bkg:associatedWithGene bkg:DISEASE_0006 ;
+    bkg:canonicalName "PTPN22"^^xsd:string ;
+    bkg:hasSynonym "LYP"^^xsd:string,
+        "Protein tyrosine phosphatase non-receptor type 22"^^xsd:string ;
+    bkg:hasXref "Ensembl:ENSG00000134242"^^xsd:string,
+        "HGNC:HGNC:9646"^^xsd:string,
+        "NCBIGene:26191"^^xsd:string ;
+    bkg:participatesInPathway bkg:PATHWAY_0005 .
+
+bkg:associatedWithGene a owl:ObjectProperty ;
+    rdfs:domain bkg:Gene ;
+    rdfs:range bkg:Disease .
+
+bkg:canonicalName a owl:DatatypeProperty .
+
+bkg:hasSynonym a owl:DatatypeProperty .
+
+bkg:hasXref a owl:DatatypeProperty .
+
+bkg:ontology a owl:Ontology ;
+    rdfs:label "Biomedical Knowledge Graph Ontology" ;
+    dc:description "OWL ontology modeling biomedical entities (diseases, drugs, genes, pathways) and their relationships for entity resolution and knowledge-graph enrichment." .
+
+bkg:participatesInPathway a owl:ObjectProperty ;
+    rdfs:domain bkg:Gene ;
+    rdfs:range bkg:Pathway .
+
+bkg:targets a owl:ObjectProperty ;
+    rdfs:domain bkg:Drug ;
+    rdfs:range bkg:Pathway .
+
+bkg:treats a owl:ObjectProperty ;
+    rdfs:domain bkg:Drug ;
+    rdfs:range bkg:Disease .
+
+bkg:DISEASE_0002 a bkg:Disease,
+        owl:NamedIndividual ;
+    bkg:canonicalName "Type 1 Diabetes Mellitus"^^xsd:string ;
+    bkg:hasSynonym "Insulin-dependent diabetes mellitus"^^xsd:string,
+        "Juvenile diabetes"^^xsd:string,
+        "T1DM"^^xsd:string,
+        "Type 1 Diabetes"^^xsd:string ;
+    bkg:hasXref "ICD10:E10"^^xsd:string,
+        "MONDO:MONDO:0005147"^^xsd:string,
+        "UMLS:C0011854"^^xsd:string .
+
+bkg:DISEASE_0003 a bkg:Disease,
+        owl:NamedIndividual ;
+    bkg:canonicalName "Essential Hypertension"^^xsd:string ;
+    bkg:hasSynonym "HTN"^^xsd:string,
+        "High Blood Pressure"^^xsd:string,
+        "Hypertension"^^xsd:string,
+        "Primary Hypertension"^^xsd:string ;
+    bkg:hasXref "ICD10:I10"^^xsd:string,
+        "MONDO:MONDO:0005044"^^xsd:string,
+        "UMLS:C0085580"^^xsd:string .
+
+bkg:DISEASE_0004 a bkg:Disease,
+        owl:NamedIndividual ;
+    bkg:canonicalName "Alzheimer Disease"^^xsd:string ;
+    bkg:hasSynonym "AD"^^xsd:string,
+        "Alzheimer Dementia"^^xsd:string,
+        "Alzheimer's Disease"^^xsd:string,
+        "Senile dementia Alzheimer type"^^xsd:string ;
+    bkg:hasXref "ICD10:G30"^^xsd:string,
+        "MONDO:MONDO:0004975"^^xsd:string,
+        "UMLS:C0002395"^^xsd:string .
+
+bkg:DISEASE_0005 a bkg:Disease,
+        owl:NamedIndividual ;
+    bkg:canonicalName "Non-Small Cell Lung Carcinoma"^^xsd:string ;
+    bkg:hasSynonym "NSCLC"^^xsd:string,
+        "Non-Small Cell Lung Cancer"^^xsd:string,
+        "Non-small cell carcinoma of lung"^^xsd:string ;
+    bkg:hasXref "ICD10:C34"^^xsd:string,
+        "MONDO:MONDO:0005233"^^xsd:string,
+        "UMLS:C0007131"^^xsd:string .
+
+bkg:DISEASE_0006 a bkg:Disease,
+        owl:NamedIndividual ;
+    bkg:canonicalName "Rheumatoid Arthritis"^^xsd:string ;
+    bkg:hasSynonym "RA"^^xsd:string,
+        "Rheumatoid arthritis, autoimmune"^^xsd:string ;
+    bkg:hasXref "ICD10:M06"^^xsd:string,
+        "MONDO:MONDO:0008383"^^xsd:string,
+        "UMLS:C0003873"^^xsd:string .
+
+bkg:PATHWAY_0002 a bkg:Pathway,
+        owl:NamedIndividual ;
+    bkg:canonicalName "Renin-Angiotensin System"^^xsd:string ;
+    bkg:hasSynonym "RAAS pathway"^^xsd:string,
+        "RAS pathway"^^xsd:string,
+        "Renin angiotensin aldosterone system"^^xsd:string ;
+    bkg:hasXref "KEGG:hsa04614"^^xsd:string,
+        "Reactome:R-HSA-2022377"^^xsd:string .
+
+bkg:PATHWAY_0003 a bkg:Pathway,
+        owl:NamedIndividual ;
+    bkg:canonicalName "Amyloid Precursor Protein Metabolism"^^xsd:string ;
+    bkg:hasSynonym "APP metabolic pathway"^^xsd:string,
+        "Amyloid-beta processing pathway"^^xsd:string ;
+    bkg:hasXref "KEGG:hsa05010"^^xsd:string,
+        "Reactome:R-HSA-9679506"^^xsd:string .
+
+bkg:PATHWAY_0004 a bkg:Pathway,
+        owl:NamedIndividual ;
+    bkg:canonicalName "EGFR Signaling Pathway"^^xsd:string ;
+    bkg:hasSynonym "Epidermal growth factor receptor signaling"^^xsd:string,
+        "ErbB signaling pathway"^^xsd:string ;
+    bkg:hasXref "KEGG:hsa04012"^^xsd:string,
+        "Reactome:R-HSA-177929"^^xsd:string .
+
+bkg:PATHWAY_0005 a bkg:Pathway,
+        owl:NamedIndividual ;
+    bkg:canonicalName "T Cell Receptor Signaling Pathway"^^xsd:string ;
+    bkg:hasSynonym "T-cell receptor signalling pathway"^^xsd:string,
+        "TCR signaling"^^xsd:string ;
+    bkg:hasXref "KEGG:hsa04660"^^xsd:string,
+        "Reactome:R-HSA-202403"^^xsd:string .
+
+bkg:DISEASE_0001 a bkg:Disease,
+        owl:NamedIndividual ;
+    bkg:canonicalName "Type 2 Diabetes Mellitus"^^xsd:string ;
+    bkg:hasSynonym "Adult-onset diabetes"^^xsd:string,
+        "Diabetes Mellitus Type 2"^^xsd:string,
+        "Non-insulin-dependent diabetes mellitus"^^xsd:string,
+        "T2DM"^^xsd:string,
+        "Type 2 Diabetes"^^xsd:string ;
+    bkg:hasXref "ICD10:E11"^^xsd:string,
+        "MONDO:MONDO:0005148"^^xsd:string,
+        "UMLS:C0011860"^^xsd:string .
+
+bkg:BiomedicalEntity a owl:Class .
+
+bkg:PATHWAY_0001 a bkg:Pathway,
+        owl:NamedIndividual ;
+    bkg:canonicalName "Insulin Signaling Pathway"^^xsd:string ;
+    bkg:hasSynonym "Insulin receptor signaling"^^xsd:string,
+        "Insulin signalling pathway"^^xsd:string ;
+    bkg:hasXref "KEGG:hsa04910"^^xsd:string,
+        "Reactome:R-HSA-74752"^^xsd:string .
+
+bkg:Pathway a owl:Class ;
+    rdfs:label "Pathway" ;
+    rdfs:subClassOf bkg:BiomedicalEntity .
+
+bkg:Disease a owl:Class ;
+    rdfs:label "Disease" ;
+    rdfs:subClassOf bkg:BiomedicalEntity .
+
+bkg:Drug a owl:Class ;
+    rdfs:label "Drug" ;
+    rdfs:subClassOf bkg:BiomedicalEntity .
+
+bkg:Gene a owl:Class ;
+    rdfs:label "Gene" ;
+    rdfs:subClassOf bkg:BiomedicalEntity .
+
